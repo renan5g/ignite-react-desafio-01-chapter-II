@@ -1,4 +1,4 @@
-export interface Product {
+export interface IProduct {
   id: number;
   title: string;
   price: number;
@@ -6,7 +6,13 @@ export interface Product {
   amount: number;
 }
 
-export interface Stock {
+export interface IStock {
   id: number;
   amount: number;
+}
+
+export interface IUpdateProductDto {
+  productId: number;
+  products: IProduct[];
+  updateProduct: Partial<IProduct>;
 }
